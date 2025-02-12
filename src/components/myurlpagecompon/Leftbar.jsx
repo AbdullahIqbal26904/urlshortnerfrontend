@@ -20,10 +20,12 @@ function Leftbar() {
     return (
         <div className={`fixed flex items-center justify-center flex-col h-full bg-white border-r-2 ${openleftbar ? 'w-1/6' : 'w-16'}`}>
             {/* Logo */}
-            <img className="absolute left-3 top-3 h-12 w-12" src="/images/bitly.png" alt="Logo" />
+            <img className={`absolute left-3 top-3 h-12 w-12 ${openleftbar ? 'h-12 w-12' : "h-8 w-8"}`} src="/images/bitly.png" alt="Logo" />
             {/* Create New Button */}
-            <button className="absolute top-20 bg-[#022d94] font-semibold text-white w-[90%] h-[40px] rounded-md flex items-center justify-center gap-2">
-                <FaPlus /> Create new
+            <button className={`absolute top-20 bg-[#022d94] font-semibold text-white rounded-md flex items-center justify-center gap-2
+                ${openleftbar ? 'w-[90%] h-[40px]' : "h-10 w-10"}`}>
+                <FaPlus /> 
+                {openleftbar && <span className="font-semibold">Create new</span>}
             </button>
 
             <hr className="w-full absolute top-[135px] border-gray-300" />
