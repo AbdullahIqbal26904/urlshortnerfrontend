@@ -14,7 +14,14 @@ export default function Navbar() {
     ${openleftbar ? 'left-[238px] w-5/6' : 'left-16 w-[95%]'}`}
     >
 
-      <button onClick={closeleftbar} className="absolute top-6 left-[-35px] rounded-full z-50 bg-black text-white">click me</button>
+      <button
+        onClick={closeleftbar}
+        className="absolute top-10 left-[-20px] rounded-full z-50 bg-pink-100 text-black w-10 h-10 flex items-center justify-center  text-lg font-bold
+               hover:bg-pink-200 hover:scale-110 transition-all duration-300 shadow-md"
+      >
+        {openleftbar ? "◄" : "►"}
+      </button>
+
       <input
         type="text"
         placeholder="Search..."
