@@ -1,10 +1,10 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setopenSlider, setshowloader, setsliderData } from "@/redux/slices/urlslice";
 import { useSelector } from "react-redux";
 import { SocialIcon } from 'react-social-icons'
 function Slider() {
-  const { openSlider,loading, sliderData } = useSelector(state => state.allCart);
+  const { openSlider, loading, sliderData } = useSelector(state => state.allCart);
   const [animate, setAnimate] = useState(false);
   const dispatch = useDispatch();
   function handleClick(e) {
