@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import QRBitlySection from "./QRBitlySection";
 export default function Innerlinks() {
   const { openleftbar } = useSelector(state => state.allCart);
+  const [details, setDetails] = useState(false);
   const [links, setLinks] = useState([
     {
       id: 1,
@@ -10,11 +12,43 @@ export default function Innerlinks() {
       originalLink: "https://www.youtube.com/watch?v=Gz38Yj09k3A&list=RDGz38Yj09k3A&start_radio=1",
       date: "Feb 11, 2025",
     },
+    {
+      id: 2,
+      title: "YouTube",
+      shortLink: "bit.ly/3WTFFzL",
+      originalLink: "https://www.youtube.com/watch?v=Gz38Yj09k3A&list=RDGz38Yj09k3A&start_radio=1",
+      date: "Feb 11, 2025",
+    },
+    {
+      id: 3,
+      title: "YouTube",
+      shortLink: "bit.ly/3WTFFzL",
+      originalLink: "https://www.youtube.com/watch?v=Gz38Yj09k3A&list=RDGz38Yj09k3A&start_radio=1",
+      date: "Feb 11, 2025",
+    },
+    {
+      id: 4,
+      title: "YouTube",
+      shortLink: "bit.ly/3WTFFzL",
+      originalLink: "https://www.youtube.com/watch?v=Gz38Yj09k3A&list=RDGz38Yj09k3A&start_radio=1",
+      date: "Feb 11, 2025",
+    },
+    {
+      id: 5,
+      title: "YouTube",
+      shortLink: "bit.ly/3WTFFzL",
+      originalLink: "https://www.youtube.com/watch?v=Gz38Yj09k3A&list=RDGz38Yj09k3A&start_radio=1",
+      date: "Feb 11, 2025",
+    },
   ]);
-
+  function opendetails() {
+    setDetails(!details);
+  }
+  
   return (
-    <div className={`absolute h-full top-[63px] overflow-x-hidden bg-[#f5f5f5] px-6 py-4
-    ${openleftbar ? 'left-[238px] w-5/6' : 'left-16 w-[95%]'}`}>
+    <div className={`absolute top-[63px] px-6 py-4 bg-[#f5f5f5] 
+      ${openleftbar ? 'w-[83%] left-[240px]' : 'left-16 w-[95%] '} min-h-screen overflow-y-hidden overflow-x-hidden`}>
+
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-3xl font-bold font-montserrat">Bitly Links</h2>
@@ -36,12 +70,13 @@ export default function Innerlinks() {
         <option>Show: Active</option>
         <option>Hidden</option>
       </select>
-      <div className="flex items-center justify-center w-full">
+      <div className="flex mb-[200px] flex-col items-center justify-center w-full">
         {/* Links List */}
         {links.map((link) => (
           <div
             key={link.id}
-            className="bg-white p-4 w-[1200px] h-[200px] rounded-lg shadow-md mb-4 flex items-start justify-between 
+            onClick={setDetails}
+            className="bg-white p-4 w-[90%] h-[200px] rounded-lg shadow-md mb-4 flex items-start justify-between 
                      transition-all duration-300 hover:shadow-lg hover:border hover:border-blue-300"
           >
             {/* Left Section */}
