@@ -40,7 +40,7 @@ function Navbarcomp() {
             return;
         }
         if(item.name === "My URLs"){
-            router.push('/Myurls');
+            router.push('/myurls');
             return;
         }
         if((sliderData != "My URLs" || sliderData != "Sign Up" || sliderData != "Sign In") && (item.name === "My URLs" || item.name === "Sign Up" || item.name === "Sign In") ){
