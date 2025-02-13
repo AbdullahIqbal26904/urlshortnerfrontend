@@ -28,9 +28,9 @@ export default function Navbar() {
         className="w-[262px] h-10 bg-gray-200 rounded-lg px-4 outline-none"
       />
       <div className="flex items-center space-x-4 relative">
-        <button className="px-4 py-2 bg-blue-500 text-white rounded-lg">Upgrade</button>
+        <button className="px-4 py-2 bg-[#007c8c] text-white  rounded-md">Upgrade</button>
 
-        <button className="text-gray-600 text-xl">❓</button>
+        <button className="text-white text-2xl bg-gray-800 font-bold rounded-full w-8 h-8">?</button>
         <div
           className="relative"
           onMouseEnter={() => setIsDropdownOpen(true)}

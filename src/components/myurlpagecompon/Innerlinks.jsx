@@ -12,61 +12,35 @@ export default function Innerlinks() {
       originalLink: "https://www.youtube.com/watch?v=Gz38Yj09k3A&list=RDGz38Yj09k3A&start_radio=1",
       date: "Feb 11, 2025",
     },
-    {
-      id: 2,
-      title: "YouTube",
-      shortLink: "bit.ly/3WTFFzL",
-      originalLink: "https://www.youtube.com/watch?v=Gz38Yj09k3A&list=RDGz38Yj09k3A&start_radio=1",
-      date: "Feb 11, 2025",
-    },
-    {
-      id: 3,
-      title: "YouTube",
-      shortLink: "bit.ly/3WTFFzL",
-      originalLink: "https://www.youtube.com/watch?v=Gz38Yj09k3A&list=RDGz38Yj09k3A&start_radio=1",
-      date: "Feb 11, 2025",
-    },
-    {
-      id: 4,
-      title: "YouTube",
-      shortLink: "bit.ly/3WTFFzL",
-      originalLink: "https://www.youtube.com/watch?v=Gz38Yj09k3A&list=RDGz38Yj09k3A&start_radio=1",
-      date: "Feb 11, 2025",
-    },
-    {
-      id: 5,
-      title: "YouTube",
-      shortLink: "bit.ly/3WTFFzL",
-      originalLink: "https://www.youtube.com/watch?v=Gz38Yj09k3A&list=RDGz38Yj09k3A&start_radio=1",
-      date: "Feb 11, 2025",
-    },
+
   ]);
   function opendetails() {
     setDetails(!details);
   }
-  
+
   return (
-    <div className={`absolute top-[63px] px-6 py-4 bg-[#f5f5f5] 
-      ${openleftbar ? 'w-[83%] left-[240px]' : 'left-16 w-[95%] '} min-h-screen overflow-y-hidden overflow-x-hidden`}>
+    <div className={`absolute top-[63px] px-6 py-4 bg-[#f4f6fa] 
+      ${openleftbar ? 'w-[83%] left-[239px]' : 'left-16 w-[95%] '} min-h-screen overflow-y-hidden overflow-x-hidden`}>
 
       {/* Header */}
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-between items-center mt-4 ml-5 mb-6">
         <h2 className="text-3xl font-bold font-montserrat">Bitly Links</h2>
-        <button className="px-4 py-2 bg-blue-500 text-white rounded-lg">Create link</button>
+        <button className="px-4 py-2 bg-[#2a5bd7] hover:bg-[#022d94] text-white rounded-md">Create link</button>
       </div>
 
       {/* Search & Filters */}
-      <div className="flex space-x-2 mb-6">
+      <div className="flex space-x-2 mb-6 mt-4 ml-5">
         <input
           type="text"
           placeholder="Search links..."
-          className="flex-grow px-4 py-2 bg-white border rounded-lg outline-none"
+          className="w-[280px] px-4 py-2 bg-white font-montserrat border rounded-sm border-1 focus outline-blue-700"
         />
-        <button className="px-4 py-2 border rounded-lg">Filter by created date</button>
-        <button className="px-4 py-2 border rounded-lg">Add filters</button>
+        <button className="px-4 py-2 bg-white font-medium font-montserrat border rounded-sm hover:bg-gray-300">Filter by created date</button>
+        <button className="px-4 py-2 bg-white border rounded-sm font-medium font-montserrat hover:bg-gray-300">Add filters</button>
       </div>
-      <hr className="w-full absolute top-[135px] border-gray-300" />
-      <select className="px-4 mb-4 mt-10 py-2 border rounded-lg">
+
+      <hr className="w-[95%] absolute opacity-25 mt-4 top-[135px] border-gray-300" />
+      <select className="px-4 hover:bg-gray-300 cursor-pointer mt-4 font-montserrat ml-5 mb-4  mt-10 py-2 border rounded-lg">
         <option>Show: Active</option>
         <option>Hidden</option>
       </select>
@@ -76,7 +50,7 @@ export default function Innerlinks() {
           <div
             key={link.id}
             onClick={setDetails}
-            className="bg-white p-4 w-[90%] h-[200px] rounded-lg shadow-md mb-4 flex items-start justify-between 
+            className="bg-white p-4 w-[97%] h-[200px] rounded-lg shadow-md mb-4 flex items-start justify-between 
                      transition-all duration-300 hover:shadow-lg hover:border hover:border-blue-300"
           >
             {/* Left Section */}

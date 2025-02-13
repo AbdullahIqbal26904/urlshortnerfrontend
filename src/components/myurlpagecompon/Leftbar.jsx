@@ -29,7 +29,7 @@ function Leftbar() {
             {/* Create New Button */}
             <button 
             
-            className={`absolute top-20 bg-[#022d94] font-semibold text-white rounded-md flex items-center justify-center gap-2
+            className={`absolute top-20 bg-[#022d94] font-medium  text-white rounded-md flex items-center justify-center gap-2
                 ${openleftbar ? 'w-[90%] h-[40px]' : "h-10 w-10"}`}>
                 <FaPlus /> 
                 {openleftbar && <span className="font-semibold">Create new</span>}
@@ -46,7 +46,7 @@ function Leftbar() {
                         onClick={() => gotohome(button.name)}
                     >
                         {button.icon}
-                        {openleftbar && <span className="font-semibold">{button.name}</span>}
+                        {openleftbar && <span className="font-montserrat font-medium">{button.name}</span>}
                     </button>
                 ))}
             </div>
@@ -57,7 +57,7 @@ function Leftbar() {
                 >
                     <IoSettingsSharp />
 
-                    {openleftbar && <span className="font-semibold">Settings</span>}
+                    {openleftbar && <span className="font-montserrat font-medium">Settings</span>}
                 </button>
             </div>
         </div>
